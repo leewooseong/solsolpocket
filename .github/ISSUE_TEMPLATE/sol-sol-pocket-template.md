@@ -1,5 +1,5 @@
 ---
-name: Parking function template
+name: Sol Sol Pocket template
 about: Describe this issue template's purpose here.
 title: ''
 labels: ''
