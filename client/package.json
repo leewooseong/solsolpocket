@@ -6,9 +6,14 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test:eslint": "echo \"\\033[33mRunning eslint check\" && eslint ."
   },
   "dependencies": {
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-universe": "^12.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "expo": "~49.0.8",
     "expo-cli": "^6.3.10",
     "expo-status-bar": "~1.6.0",
