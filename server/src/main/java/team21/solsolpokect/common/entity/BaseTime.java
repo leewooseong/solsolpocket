@@ -17,11 +17,11 @@ public abstract class BaseTime {
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
-    protected LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
     @Column(nullable = false)
-    protected LocalDateTime updateAt;
+    private LocalDateTime updateAt;
 
     @Column(nullable = true)
     private LocalDateTime deletedDate;
