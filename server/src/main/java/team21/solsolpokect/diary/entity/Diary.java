@@ -19,11 +19,11 @@ public class Diary {
     @Column(nullable = false)
     private LocalDateTime dailyDate;
 
-    @Column(nullable = false)
+    @Column
     private int dailyScore;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     private Users users;
 
     @ManyToOne(fetch = FetchType.LAZY)
