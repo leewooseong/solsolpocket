@@ -1,4 +1,7 @@
 package team21.solsolpokect.diary.repository;
 
-public interface FeedbackRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import team21.solsolpokect.diary.entity.Feedback;
+
+public interface FeedbackRepository extends JpaRepository<Feedback,Long> {
 }
