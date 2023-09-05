@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 @Getter
 public class FeedbackInfosResponseDto {
+
     private Long feedbackId;
     private String contents;
     private LocalDateTime createAt;

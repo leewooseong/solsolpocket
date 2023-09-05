@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 @Getter
 public class MonthlyGoalMoneyRequestDto {
+
     private LocalDateTime date;
     private int goalMoney;
     private String userId;

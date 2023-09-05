@@ -7,6 +7,7 @@ import java.time.LocalTime;
 
 @Getter
 public class DiaryInfoDetailResponseDto {
+
     private LocalDate dealDate;
     private LocalTime dealTime;
     private int withdrawMoney;
