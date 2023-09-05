@@ -1,4 +1,7 @@
 package team21.solsolpokect.transfer.repository;
 
-public interface AutoTransferRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import team21.solsolpokect.transfer.entity.AutoTransfer;
+
+public interface AutoTransferRepository extends JpaRepository<AutoTransfer,Long> {
 }
