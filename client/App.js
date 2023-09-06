@@ -1,4 +1,5 @@
 import 'react-native-gesture-handler';
+<<<<<<< HEAD
 import { StyleSheet, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -8,6 +9,20 @@ import Detail from './pages/Detail';
 import QuestType1 from './pages/QuestType1';
 import QuestType3 from './pages/QuestType2';
 import QuestType2 from './pages/QuestType3';
+=======
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StyleSheet, Dimensions } from 'react-native';
+
+import Calender from './pages/Calender';
+import Detail from './pages/Detail';
+import Main from './pages/Main';
+import QuestType1 from './pages/QuestType1';
+import QuestType3 from './pages/QuestType2';
+import QuestType2 from './pages/QuestType3';
+import SignUp from './pages/SignUp';
+import TransactionHistory from './pages/TransactionHistory';
+>>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
 
 const Stack = createNativeStackNavigator();
 const WIDTH = Dimensions.get('window').width;
@@ -16,7 +31,11 @@ const HIGHT = Dimensions.get('window').height;
 export default function App() {
   return (
     <NavigationContainer>
+<<<<<<< HEAD
       <Stack.Navigator initialRouteName="Main">
+=======
+      <Stack.Navigator initialRouteName="TransactionHistory">
+>>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
         <Stack.Screen
           name="Main"
           component={Main}
@@ -77,6 +96,15 @@ export default function App() {
             headerTintColor: 'white',
           }}
         />
+<<<<<<< HEAD
+=======
+
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen
+          name="TransactionHistory"
+          component={TransactionHistory}
+        />
+>>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
       </Stack.Navigator>
     </NavigationContainer>
   );
