@@ -10,6 +10,7 @@ import QuestType1 from './pages/QuestType1';
 import QuestType3 from './pages/QuestType2';
 import QuestType2 from './pages/QuestType3';
 import SignUp from './pages/SignUp';
+import TransactionHistory from './pages/TransactionHistory';
 
 const Stack = createNativeStackNavigator();
 const WIDTH = Dimensions.get('window').width;
@@ -18,7 +19,7 @@ const HIGHT = Dimensions.get('window').height;
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignUp">
+      <Stack.Navigator initialRouteName="TransactionHistory">
         <Stack.Screen
           name="Main"
           component={Main}
@@ -81,6 +82,10 @@ export default function App() {
         />
 
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen
+          name="TransactionHistory"
+          component={TransactionHistory}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
