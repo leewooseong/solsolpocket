@@ -1,6 +1,6 @@
 // 상세화면 입니다~
 
-import { Text, View } from "react-native";
+import { Text, View } from 'react-native';
 
 export default () => {
   return (
