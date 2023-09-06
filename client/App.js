@@ -1,13 +1,15 @@
 import 'react-native-gesture-handler';
-import { StyleSheet, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Main from './pages/Main';
+import { StyleSheet, Dimensions } from 'react-native';
+
 import Calender from './pages/Calender';
 import Detail from './pages/Detail';
+import Main from './pages/Main';
 import QuestType1 from './pages/QuestType1';
 import QuestType3 from './pages/QuestType2';
 import QuestType2 from './pages/QuestType3';
+import SignUp from './pages/SignUp';
 
 const Stack = createNativeStackNavigator();
 const WIDTH = Dimensions.get('window').width;
@@ -16,7 +18,7 @@ const HIGHT = Dimensions.get('window').height;
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Main">
+      <Stack.Navigator initialRouteName="SignUp">
         <Stack.Screen
           name="Main"
           component={Main}
@@ -77,6 +79,8 @@ export default function App() {
             headerTintColor: 'white',
           }}
         />
+
+        <Stack.Screen name="SignUp" component={SignUp} />
       </Stack.Navigator>
     </NavigationContainer>
   );
