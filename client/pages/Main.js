@@ -10,6 +10,7 @@ import {
   Animated,
 } from 'react-native';
 import Title from '../components/Title';
+import { images } from '../constants/index';
 import { FlatListData } from '../test/FlatListData';
 // eslint-disable-next-line import/order, no-unused-vars
 import Divider from '../components/Divider';
@@ -25,10 +26,11 @@ const columnSize = WIDTH / numColumns;
 export default ({ navigation }) => {
   const { DATA } = FlatListData();
 
+  //icons.questMoney
   const icons = {
-    1: require('../img/quest_money.png'),
-    2: require('../img/quest_excellent.png'),
-    '-1': require('../img/quest_star.png'),
+    1: images.questMoney,
+    2: images.questExcellent,
+    '-1': images.questStar,
   };
 
   const renderItem = ({ item: { id, type, name } }) => {
@@ -72,7 +74,7 @@ export default ({ navigation }) => {
         onPress={() => navigation.navigate('Detail')}>
         {/* 회원 카드 부분  */}
         <Image
-          source={require('../img/user_gold_card.png')}
+          source={require('../assets/images/user_gold_card.png')}
           style={styles.forImage}
         />
         <View style={styles.forNameView}>
