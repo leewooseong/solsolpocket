@@ -1,7 +1,7 @@
+import { SimpleLineIcons } from '@expo/vector-icons';
+import dayjs from 'dayjs';
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import dayjs from 'dayjs';
-import { SimpleLineIcons } from '@expo/vector-icons';
 
 import { getDayColor, getDayText } from '../utils/CanlendarUtils';
 
