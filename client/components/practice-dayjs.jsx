@@ -1,7 +1,8 @@
-import dayjs from "dayjs";
-import isBetween from "dayjs/plugin/isBetween";
-import isSameOrBefore from "dayjs/plugin/isSameOrBefore";
-import isSameOrAfter from "dayjs/plugin/isSameOrAfter";
+/* eslint-disable prettier/prettier */
+import dayjs from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore';
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
 dayjs.extend(isBetween);
 dayjs.extend(isSameOrBefore);
 dayjs.extend(isSameOrAfter);
@@ -10,7 +11,7 @@ export const runPracticeDayjs = () => {
   const hour = new Date().getHours();
   // console.log('hour', hour);
 
-  const now = dayjs("2022-11-04 16:01:30");
+  const now = dayjs('2022-11-04 16:01:30');
   // console.log("===== Practice Dayjs =====");
   // console.log(
   //   "1. set minute - hh",
@@ -39,8 +40,8 @@ export const runPracticeDayjs = () => {
   // );
   // console.log("11. startOf", dayjs(now).startOf("month").format("YYYY.MM.DD"));
   // console.log("12. endOf", dayjs(now).endOf("month").format("YYYY.MM.DD"));
-  const aDate = dayjs("2022-10-29 15:00:20");
-  const bDate = dayjs("2022-10-29 16:00:00");
+  const aDate = dayjs('2022-10-29 15:00:20');
+  const bDate = dayjs('2022-10-29 16:00:00');
   // console.log("13. isSame month", dayjs(aDate).isSame(bDate, "month"));
   // console.log("14. isSame hour", dayjs(aDate).isSame(bDate, "hour"));
   // console.log("15. isBefore", dayjs(aDate).isBefore(bDate));
