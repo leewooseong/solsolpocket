@@ -10,13 +10,11 @@ import {
   Animated,
 } from 'react-native';
 import Title from '../components/Title';
-<<<<<<< HEAD
-=======
 import { images } from '../constants/index';
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
 import { FlatListData } from '../test/FlatListData';
 // eslint-disable-next-line import/order, no-unused-vars
 import Divider from '../components/Divider';
+import ChooseQuest from './ChooseQuest';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
@@ -29,27 +27,20 @@ const columnSize = WIDTH / numColumns;
 export default ({ navigation }) => {
   const { DATA } = FlatListData();
 
-<<<<<<< HEAD
-  const icons = {
-    1: require('../img/quest_money.png'),
-    2: require('../img/quest_excellent.png'),
-    '-1': require('../img/quest_star.png'),
-=======
   //icons.questMoney
   const icons = {
     1: images.questMoney,
     2: images.questExcellent,
-    '-1': images.questStar,
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
+    3: images.questStar,
   };
 
   const renderItem = ({ item: { id, type, name } }) => {
-    if (type === -1) {
+    if (type === 3) {
       return (
         <TouchableOpacity
           key={`index - ${id}`}
-          onPress={() => navigation.navigate(`QuestType${type}`)}
-          style={styles.renderItemStyle}>
+          onPress={() => navigation.navigate('ChooseQuest')}
+          style={[styles.renderItemStyle, { backgroundColor: '#F8F259' }]}>
           <Image
             source={icons[type]}
             resizeMode="contain"
@@ -84,11 +75,7 @@ export default ({ navigation }) => {
         onPress={() => navigation.navigate('Detail')}>
         {/* 회원 카드 부분  */}
         <Image
-<<<<<<< HEAD
-          source={require('../img/user_gold_card.png')}
-=======
           source={require('../assets/images/user_gold_card.png')}
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
           style={styles.forImage}
         />
         <View style={styles.forNameView}>
@@ -118,7 +105,7 @@ export default ({ navigation }) => {
           renderItem={renderItem}
           keyExtractor={item => item.id}
           data={DATA}
-          horizontal={true}
+          numColumns={3}
         />
       </View>
     </View>
@@ -184,7 +171,7 @@ const styles = StyleSheet.create({
   },
 
   renderItemStyle: {
-    marginLeft: 40,
+    marginLeft: 50,
     width: columnSize,
     height: columnSize,
     backgroundColor: '#AAEBFF',
