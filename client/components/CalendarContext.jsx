@@ -3,7 +3,7 @@ import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import dayjs from 'dayjs';
 import { SimpleLineIcons } from '@expo/vector-icons';
 
-import { getDayColor, getDayText } from '../utils/constants/CanlendarUtils';
+import { getDayColor, getDayText } from '../utils/CanlendarUtils';
 
 const columnSize = 100;
 const Column = ({

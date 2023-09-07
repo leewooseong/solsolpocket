@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import { Ionicons } from '@expo/vector-icons';
 import dayjs from 'dayjs';
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
 import { useEffect, useRef } from 'react';
 import {
   Alert,
@@ -17,13 +14,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-<<<<<<< HEAD
-import dayjs from 'dayjs';
-import DateTimePickerModal from 'react-native-modal-datetime-picker';
-import { Ionicons } from '@expo/vector-icons';
-
-import { runPracticeDayjs } from '../components/practice-dayjs';
-=======
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 import AddTodoInput from '../components/AddTodoInput';
@@ -32,29 +22,16 @@ import Margin from '../components/Margin';
 import { runPracticeDayjs } from '../components/practice-dayjs';
 import { useCalendar } from '../hooks/use-calendar';
 import { useTodoList } from '../hooks/use-todo-list';
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
 import {
   getCalendarColumns,
   ITEM_WIDTH,
   statusBarHeight,
   bottomSpace,
-} from '../utils/constants/CanlendarUtils';
-<<<<<<< HEAD
-import { useCalendar } from '../hooks/use-calendar';
-import { useTodoList } from '../hooks/use-todo-list';
-import CalendarContext from '../components/CalendarContext';
-import AddTodoInput from '../components/AddTodoInput';
-
-import Margin from '../components/Margin';
-
-export default function App() {
-  const now = dayjs();
-=======
+} from '../utils/CanlendarUtils';
 
 export default function App() {
   const now = dayjs();
 
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const {
     selectedDate,
     setSelectedDate,
@@ -65,10 +42,6 @@ export default function App() {
     subtract1Month,
     add1Month,
   } = useCalendar(now);
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const {
     todoList,
     filteredTodoList,
@@ -114,10 +87,6 @@ export default function App() {
       <Margin height={15} />
     </View>
   );
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const renderItem = ({ item: todo }) => {
     const isSuccess = todo.isSuccess;
     const onPress = () => toggleTodo(todo.id);
@@ -133,10 +102,6 @@ export default function App() {
         },
       ]);
     };
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
     return (
       <Pressable
         onPress={onPress}
@@ -163,38 +128,22 @@ export default function App() {
       </Pressable>
     );
   };
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const scrollToEnd = () => {
     // eslint-disable-next-line no-undef
     setTimeout(() => {
       flatListRef.current?.scrollToEnd({ animated: true });
     }, 300);
   };
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const onPressAdd = () => {
     addTodo();
     resetInput();
     scrollToEnd();
   };
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const onSubmitEditing = () => {
     addTodo();
     resetInput();
     scrollToEnd();
   };
-<<<<<<< HEAD
-=======
-
->>>>>>> 65c18af6f778e069f5045379bd314cef3ac929ed
   const onFocus = () => {
     scrollToEnd();
   };
