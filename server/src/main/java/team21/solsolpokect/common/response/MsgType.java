@@ -7,6 +7,8 @@ public enum MsgType {
 
     DIARY_CHECK_SUCCESSFULLY("가계부 조회 성공"),
     MISSION_CREATE_SUCCESSFULLY("도전 과제 생성 성공"),
+    MISSION_ALLOW_SUCCESSFULLY("도전 과제 요청 성공"),
+    MISSION_REJECT_SUCCESSFULLY("도전 과제 거부 성공"),
     ;
 
     private final String msg;

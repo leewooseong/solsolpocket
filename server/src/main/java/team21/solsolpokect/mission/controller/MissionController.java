@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import team21.solsolpokect.common.response.ApiResponseDto;
 import team21.solsolpokect.common.response.MsgType;
 import team21.solsolpokect.common.response.ResponseUtils;
+import team21.solsolpokect.mission.dto.request.MissionAllowRequestDto;
 import team21.solsolpokect.mission.dto.request.MissionCreateRequestDto;
 import team21.solsolpokect.mission.service.MissionService;
 
@@ -20,5 +21,8 @@ public class MissionController {
         return ResponseUtils.ok(missionService.missionCreate(missionCreateRequestDto), MsgType.MISSION_CREATE_SUCCESSFULLY);
     }
 
-
+    @PutMapping("/allow/{mission-id}")
+    public ApiResponseDto<Long> missionAllow(@RequestBody MissionAllowRequestDto missionAllowRequestDto) {
+        return ResponseUtils.ok(missionService.missionAllow(missionAllowRequestDto), missionAllowRequestDto.isAllow() ? MsgType.MISSION_ALLOW_SUCCESSFULLY : MsgType.MISSION_REJECT_SUCCESSFULLY);
+    }
 }
