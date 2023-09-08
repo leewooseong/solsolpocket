@@ -24,6 +24,7 @@ public class Mission extends BaseTime {
     @Column(nullable = false)
     private int reward;
 
+    //도전 과제 성공 여부
     @Column(nullable = false)
     private boolean complete;
 
@@ -36,6 +37,7 @@ public class Mission extends BaseTime {
     @JoinColumn(name = "USER_ID", nullable = false)
     private Users user;
 
+    //도전 과제 수락 여부
     private boolean allow;
 
     @Builder
