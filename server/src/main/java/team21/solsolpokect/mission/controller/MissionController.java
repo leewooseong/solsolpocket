@@ -6,6 +6,7 @@ import team21.solsolpokect.common.response.ApiResponseDto;
 import team21.solsolpokect.common.response.MsgType;
 import team21.solsolpokect.common.response.ResponseUtils;
 import team21.solsolpokect.mission.dto.request.MissionAllowRequestDto;
+import team21.solsolpokect.mission.dto.request.MissionCompleteRequestDto;
 import team21.solsolpokect.mission.dto.request.MissionCreateRequestDto;
 import team21.solsolpokect.mission.dto.request.MissionPictureRequestDto;
 import team21.solsolpokect.mission.dto.response.MissionInfoDetailResponseDto;
@@ -55,5 +56,9 @@ public class MissionController {
         return ResponseUtils.ok(missionService.missionAllowPicture(missionId, missionPictureRequestDto), MsgType.MISSION_ALLOW_PICTURE_SUCCESSFULLY);
     }
 
+    @PutMapping("/complete/{mission-id}")
+    public ApiResponseDto<Long> missionComplete(@PathVariable("mission-id") long missionId, @RequestBody MissionCompleteRequestDto missionCompleteRequestDto) {
 
+        return ResponseUtils.ok(missionService.missionComplete(missionId, missionCompleteRequestDto), MsgType.MISSION_COMPLETE_SUCCESSFULLY);
+    }
 }
