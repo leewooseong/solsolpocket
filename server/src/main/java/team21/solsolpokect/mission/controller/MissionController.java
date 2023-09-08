@@ -7,6 +7,7 @@ import team21.solsolpokect.common.response.MsgType;
 import team21.solsolpokect.common.response.ResponseUtils;
 import team21.solsolpokect.mission.dto.request.MissionAllowRequestDto;
 import team21.solsolpokect.mission.dto.request.MissionCreateRequestDto;
+import team21.solsolpokect.mission.dto.request.MissionPictureRequestDto;
 import team21.solsolpokect.mission.dto.response.MissionInfoDetailResponseDto;
 import team21.solsolpokect.mission.dto.response.MissionInfosResponseDto;
 import team21.solsolpokect.mission.service.MissionService;
@@ -32,17 +33,26 @@ public class MissionController {
 
     @GetMapping("/list")
     public ApiResponseDto<List<MissionInfosResponseDto>> missionList(@RequestParam long userId) {
+
         return ResponseUtils.ok(missionService.missionList(userId), MsgType.MISSION_LIST_SUCCESSFULLY);
     }
 
     @GetMapping("/detail/{mission-id}")
     public ApiResponseDto<MissionInfoDetailResponseDto> missionDetail(@PathVariable("mission-id") long missionId) {
+
         return ResponseUtils.ok(missionService.missionDetail(missionId), MsgType.MISSION_DETAIL_SUCCESSFULLY);
     }
 
     @DeleteMapping("/{mission-id}")
     public ApiResponseDto<Long> missionDelete(@PathVariable("mission-id") long missionId) {
+
         return ResponseUtils.ok(missionService.missionDelete(missionId), MsgType.MISSION_DELETE_SUCCESSFULLY);
+    }
+
+    @PutMapping("/allow-picture/{mission-id}")
+    public ApiResponseDto<Long> missionAllowPicture(@PathVariable("mission-id") long missionId, @RequestBody MissionPictureRequestDto missionPictureRequestDto) {
+
+        return ResponseUtils.ok(missionService.missionAllowPicture(missionId, missionPictureRequestDto), MsgType.MISSION_ALLOW_PICTURE_SUCCESSFULLY);
     }
 
 
