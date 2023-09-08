@@ -40,5 +40,10 @@ public class MissionController {
         return ResponseUtils.ok(missionService.missionDetail(missionId), MsgType.MISSION_DETAIL_SUCCESSFULLY);
     }
 
+    @DeleteMapping("/{mission-id}")
+    public ApiResponseDto<Long> missionDelete(@PathVariable("mission-id") long missionId) {
+        return ResponseUtils.ok(missionService.missionDelete(missionId), MsgType.MISSION_DELETE_SUCCESSFULLY);
+    }
+
 
 }

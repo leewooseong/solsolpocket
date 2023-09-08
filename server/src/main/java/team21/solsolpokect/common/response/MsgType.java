@@ -11,6 +11,7 @@ public enum MsgType {
     MISSION_REJECT_SUCCESSFULLY("도전 과제 거부 성공"),
     MISSION_LIST_SUCCESSFULLY("도전 과제 목록 조회 성공"),
     MISSION_DETAIL_SUCCESSFULLY("도전 과제 상세 조회 성공"),
+    MISSION_DELETE_SUCCESSFULLY("도전 과제 삭제 성공"),
     ;
 
     private final String msg;
