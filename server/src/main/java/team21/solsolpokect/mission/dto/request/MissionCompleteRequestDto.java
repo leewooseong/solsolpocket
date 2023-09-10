@@ -3,8 +3,8 @@ package team21.solsolpokect.mission.dto.request;
 import lombok.Getter;
 
 @Getter
-public class MissionPictureRequestDto {
+public class MissionCompleteRequestDto {
 
     private long userId;
-    private String picture;
+    private boolean allow;
 }
