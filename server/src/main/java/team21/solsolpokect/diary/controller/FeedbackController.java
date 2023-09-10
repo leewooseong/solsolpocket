@@ -19,6 +19,6 @@ public class FeedbackController {
     public ApiResponseDto<Void> feedbackCreate(@RequestBody FeedbackRequestDto requestDto) {
 
         feedbackService.feedbackCreate(requestDto);
-        return ResponseUtils.ok(MsgType.DIARY_CREATE_SUCCESSFULLY);
+        return ResponseUtils.ok(MsgType.FEEDBACK_CREATE_SUCCESSFULLY);
     }
 }
