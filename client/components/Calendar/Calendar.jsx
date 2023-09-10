@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 import { ScrollView } from 'react-native';
 
 import CalendarBody from './CalendarBody';
+import CalendarHeader from './CalendarHeader';
 import { useCalendar } from '../../hooks/use-calendar';
 import { generateDate } from '../../utils/CalendarUtils';
 
@@ -26,6 +27,7 @@ const Calendar = () => {
 
   return (
     <ScrollView>
+      <CalendarHeader selectedDate={selectedDate} />
       <CalendarBody
         selectedDate={selectedDate}
         setSelectedDate={setSelectedDate}
